@@ -1,10 +1,24 @@
 
-import {WinstonLog} from './winston-logger';
-import {HttpProxy} from './http-proxy';
+import {Redirector} from "./redirector";
 
-var logger = new WinstonLog();
-logger.level = 'Debug';
+var redirector = new Redirector();
 
-var proxy = new HttpProxy(logger);
+redirector.listen(3000);
 
-proxy.listen(9901);
+
+//
+// Create your target server
+// WORKING proxy code
+/*
+var http = require('http'),
+    httpProxy = require('http-proxy');
+
+
+httpProxy.createProxyServer({target:'http://localhost:9000'}).listen(8000); // See (†)
+
+http.createServer(function (req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.write('request successfully proxied!' + '\n' + JSON.stringify(req.headers));
+  res.end();
+}).listen(9000);
+*/

@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const winston = require("winston");
 class WinstonLog {
     constructor() {
@@ -33,3 +34,4 @@ class WinstonLog {
     }
 }
 exports.WinstonLog = WinstonLog;
+//# sourceMappingURL=winston-logger.js.map

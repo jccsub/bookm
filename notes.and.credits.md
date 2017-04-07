@@ -17,8 +17,7 @@
             - [Node.js EventEmitter with Custom Events](#nodejs-eventemitter-with-custom-events)
     - [Required Node Version](#required-node-version)
     - [Debugging ES6 in VS Code](#debugging-es6-in-vs-code)
-    - [Credits](#credits)
-        - [Proxy Server](#proxy-server)
+    - [Proxy Server](#proxy-server)
     - [Additional Helpful Links](#additional-helpful-links)
 
 <!-- /TOC -->
@@ -107,19 +106,16 @@ The above "test" pattern is working.
 Struggled with this for a long while. Finally, what worked for me and simplest to implement was found here:  [Use Typescript and VS Code to develop your NodeJS application](https://bertrandg.github.io/node-development-with-typescript-and-vscode/)
 
 
-## Credits
-
-### Proxy Server
-I could have used [node-http-proxy](https://github.com/nodejitsu/node-http-proxy), however, I wanted to understand what was going on and have more control. Writing a proxy server didn't seem to be too complicated conceptually. I used the following as  a base:
-
-[A HTTP Proxy Server in 20 Lines of node.js Code](http://www.catonmat.net/http-proxy-in-nodejs/)
-
-* I had to modify the code slightly in order to get it to work, that's because http.createClient 
-was deprecated. The work-around used is from [this answer in StackOverflow](http://stackoverflow.com/a/22482780)
+## Proxy Server
+I considered starting with a blank slate like [this](http://www.catonmat.net/http-proxy-in-nodejs/), however, I would have consumed much of my time just trouble-shooting proxy code, which that isn't my aim here.
 
 
 ## Additional Helpful Links
 
+* [A proxy server in 20 lines](http://www.catonmat.net/http-proxy-in-nodejs/)
+  * I had to modify the code slightly in order to get it to work, that's because http.createClient 
+was deprecated. The work-around used is from [this answer in StackOverflow](http://stackoverflow.com/a/22482780)
+
 * [Heroku's Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices#use-a-smart-npmrc)
 
-* Use [FilePathToURL](http://jsfiddle.net/StephenLujan/r6DYy/)
+* [FilePathToURL](http://jsfiddle.net/StephenLujan/r6DYy/)
