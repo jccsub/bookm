@@ -16,7 +16,7 @@ class Redirector {
     }
     setup() {
         this.koa.use((ctx) => __awaiter(this, void 0, void 0, function* () {
-            ctx.body = 'Hello world';
+            ctx.redirect('http://127.0.0.1:80');
         }));
     }
     listen(port) {

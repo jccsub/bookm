@@ -10,7 +10,7 @@ export class Redirector {
 
     private setup() : void {
         this.koa.use( async (ctx) => {
-            ctx.body = 'Hello world';
+            ctx.redirect('http://127.0.0.1:80');
         });        
     }
 
